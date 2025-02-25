@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Mp3 Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 YouTube MP3 Downloader 🎧</h1>
+        <form method="POST">
+            <div class="input-group">
+                <input type="url" name="url" placeholder="YouTube linkini buraya yapıştır..." required>
+                <button type="submit">Convert To MP3 ⚡</button>
+            </div>
+        </form>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <div class="info">
+            <p>❓ How To Use:<br>
+            1. Paste your youtube video link<br>
+            2. Put to input<br>
+            3. Click The "Convert to MP3" button<br>
+            4. And Download it! 🎉</p>
+        </div>
+    </div>
+</body>
+</html>
